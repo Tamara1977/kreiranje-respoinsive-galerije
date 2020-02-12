@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced CSS -Kreiranje responsive galerije</title> 
+<style>
+ 
+    #container {
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        max-width: 1200px;
+        width: 90%;
+        display: grid;    
+        grid-template-columns: repeat(5, minmax(144px, 1fr));
+        grid-template-rows: 1fr 1fr;           
+    }    
+   .placeholder {
+        height:140px;
+        border-radius: 20px; 
+        background-color: rgb(159, 130, 240);
+   }
+   #box {
+        margin: 5px;
+        justify-self: center;
+   }
+    p {     
+        font-size: 18px;
+        font-family: sans-serif;
+        color: rgba(8, 6, 2, 0.822);
+        position: relative;
+        left: 4px;
+        bottom: 46px;
+        width: 207px;
+        background-color: rgb(202, 200, 200);
+        border-radius: 20px;
+        text-align: center;   
+    }
+    h1 {
+        display: block;
+        font-family: sans-serif;
+        padding: 10px 0 10px 63px; 
+    }
+    span {
+        font-family: sans-serif;
+        text-align: justify;
+    }         
+    @media screen and (min-width: 1201px) and (max-width: 1280px) {
+        #container {
+           grid-template-columns: repeat(5, 1fr);
+        }    
+    }
+    
+    @media screen and (min-width:961px) and (max-width: 1023px) {
+        #container {
+           grid-template-columns: repeat(4, 1fr);
+        }    
+    }
+    @media screen and (min-width:767px) and (max-width: 960px) {
+        #container {
+            grid-template-columns: repeat(3, 1fr);
+        }    
+    }    
+    @media screen and (min-width:414px) and (max-width: 766px) {
+        #container {
+            grid-template-columns: repeat(2, 1fr);
+        }    
+    }    
+    @media screen and (max-width: 414px) {
+        #container {
+            grid-template-columns: repeat(1, 1fr);
+            width: 60%;
+        }         
+    }
+    </style>
+</head>
+<body>  
+    <h1>Gallery Heading</h1>
+   <div id="container">
+   
+      <div id="box"><img src="placeholder-image.png" alt="picture1" class="placeholder"><p>Text image</p></div>  
+      <div id="box"><img src="placeholder-image.png" alt="picture2" class="placeholder"><p>Text image</p></div>  
+      <div id="box"><img src="placeholder-image.png" alt="picture3" class="placeholder"><p>Text image</p></div> 
+      <div id="box"><img src="placeholder-image.png" alt="picture4" class="placeholder"><p>Text image</p></div> 
+      <div id="box"><img src="placeholder-image.png" alt="picture5" class="placeholder"><p>Text image</p></div> 
+      <div id="box"><img src="placeholder-image.png" alt="picture6" class="placeholder"><p>Text image</p></div> 
+      <div id="box"><img src="placeholder-image.png" alt="picture7" class="placeholder"><p>Text image</p></div> 
+      <div id="box"><img src="placeholder-image.png" alt="picture8" class="placeholder"><p>Text image</p></div> 
+      <div id="box"><img src="placeholder-image.png" alt="picture9" class="placeholder"><p>Text image</p></div> 
+      <div id="box"><img src="placeholder-image.png" alt="picture10" class="placeholder"><p>Text image</p></div> 
+
+    </div>
+<!--end container--> 
+   
+<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quae assumenda quisquam odio ut error quas hic n
+    eque, asperiores alias tenetur inventore laudantium omnis dolorem minima facere provident autem 
+    laboriosam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quae assumenda quisquam odio ut error quas hic n
+    eque, asperiores alias tenetur inventore laudantium omnis dolorem minima facere provident autem 
+    laboriosam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quae assumenda quisquam odio ut error quas hic n
+    eque, asperiores alias tenetur inventore laudantium omnis dolorem minima facere provident autem 
+    laboriosam?</span>
+  
+</body>
+</html>
